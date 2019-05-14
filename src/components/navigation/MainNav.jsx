@@ -7,20 +7,18 @@ const MainNav = props => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <NavLink className="navbar-brand" to="/dashboard">
-        Dashboard
-      </NavLink>
-
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link className="nav-link" to="/movies">
-            Movies
-          </Link>
-        </li>
-      </ul>
-
-      <div>
-        <ul class="nav justify-content-end">
+      <div class="navbar-collapse collapse justify-content-between">
+        <ul class="navbar-nav mr-auto">
+          <NavLink className="navbar-brand" to="/dashboard">
+            Dashboard
+          </NavLink>
+          <li className="nav-item">
+            <Link className="nav-link" to="/movies">
+              Movies
+            </Link>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
           {!user && (
             <React.Fragment>
               <li className="nav-item">
