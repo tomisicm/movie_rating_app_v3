@@ -21,12 +21,15 @@ class MainItemFilter extends Component {
         <div className="form-group">
           <label htmlFor="film-name">Release Year:</label>
           <div className="container">
-            <input
+            {/* <input
               type="range"
               className="custom-range"
               id="ReleaseYear"
               onChange={this.onChange}
-            />
+              min="1900"
+              max={new Date().getFullYear()}
+            /> */}
+
             <span className="col indigo-text mt-1">1950</span>
             <span className="col mr-auto indigo-text mt-1">2019</span>
           </div>
