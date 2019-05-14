@@ -11,12 +11,14 @@ import MoviesPage from "./views/MoviesPage"
 function App() {
   return (
     <BrowserRouter>
-      <div className="container">
+      <div className="content">
         <MainNav />
-        <Switch>
-          <Route path="/dashboard" component={Dashboard} />
-          <Route path="/movies" component={MoviesPage} />
-        </Switch>
+        <div className="container mt-3">
+          <Switch>
+            <Route path="/dashboard" component={Dashboard} />
+            <Route path="/movies" component={MoviesPage} />
+          </Switch>
+        </div>
       </div>
     </BrowserRouter>
   )

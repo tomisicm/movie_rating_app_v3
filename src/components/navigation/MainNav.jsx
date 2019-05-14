@@ -2,11 +2,11 @@ import React from "react"
 import { Link, NavLink } from "react-router-dom"
 
 const MainNav = props => {
-  const user = { name: "djura" }
-  //const user = null
+  //const user = { name: "djura" }
+  const user = null
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
       <div className="navbar-collapse justify-content-between">
         <ul className="navbar-nav mr-auto">
           <NavLink className="navbar-brand" to="/dashboard">
@@ -22,7 +22,7 @@ const MainNav = props => {
           {!user && (
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-primary dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
@@ -32,12 +32,12 @@ const MainNav = props => {
               </button>
               <div className="dropdown-menu">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/login">
+                  <NavLink className="nav-link text-secondary" to="/login">
                     Login
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/register">
+                  <NavLink className="nav-link text-secondary" to="/register">
                     Register
                   </NavLink>
                 </li>
@@ -47,7 +47,7 @@ const MainNav = props => {
           {user && (
             <div className="dropdown">
               <button
-                className="btn btn-secondary dropdown-toggle"
+                className="btn btn-primary dropdown-toggle"
                 type="button"
                 data-toggle="dropdown"
                 aria-haspopup="true"
@@ -57,12 +57,12 @@ const MainNav = props => {
               </button>
               <div className="dropdown-menu">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/profile">
+                  <NavLink className="nav-link text-secondary" to="/profile">
                     Profile
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/logout">
+                  <NavLink className="nav-link text-secondary" to="/logout">
                     Logout
                   </NavLink>
                 </li>
