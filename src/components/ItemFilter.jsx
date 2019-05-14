@@ -1,9 +1,15 @@
 import React, { Component } from "react"
 
+import { Range } from "rc-slider"
+import "rc-slider/assets/index.css"
+
 class MainItemFilter extends Component {
-  state = {}
+  state = {
+    releaseYear: [2000, new Date().getFullYear()]
+  }
   onChange = e => {
-    console.log(e.target.value)
+    const state = { ...this.state }
+    this.setState({ ...state, releaseYear: e })
   }
 
   render() {
@@ -20,18 +26,22 @@ class MainItemFilter extends Component {
         </div>
         <div className="form-group">
           <label htmlFor="film-name">Release Year:</label>
-          <div className="container">
-            {/* <input
-              type="range"
-              className="custom-range"
-              id="ReleaseYear"
-              onChange={this.onChange}
-              min="1900"
-              max={new Date().getFullYear()}
-            /> */}
+          <div>
+            <span className="col mr-auto indigo-text mt-1">
+              {this.state.releaseYear[0]} - {this.state.releaseYear[1]}
+            </span>
 
-            <span className="col indigo-text mt-1">1950</span>
-            <span className="col mr-auto indigo-text mt-1">2019</span>
+            <Range
+              min={1900}
+              max={new Date().getFullYear()}
+              id="ReleaseYear"
+              defaultValue={[
+                this.state.releaseYear[0],
+                this.state.releaseYear[1]
+              ]}
+              allowCross={false}
+              onChange={this.onChange}
+            />
           </div>
         </div>
       </React.Fragment>

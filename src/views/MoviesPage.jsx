@@ -9,10 +9,10 @@ class MoviesPage extends Component {
       <div className="content">
         <div className="container mx-auto">
           <div className="row">
-            <div className="col-3">
+            <div className="col-4">
               <ItemFilter />
             </div>
-            <div className="col-9">Movie list</div>
+            <div className="col-8">Movie list</div>
           </div>
         </div>
       </div>
