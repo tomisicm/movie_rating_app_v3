@@ -26,23 +26,22 @@ class MainItemFilter extends Component {
         </div>
         <div className="form-group">
           <label htmlFor="film-name">Release Year:</label>
-          <div>
-            <span className="col mr-auto indigo-text mt-1">
-              {this.state.releaseYear[0]} - {this.state.releaseYear[1]}
-            </span>
 
-            <Range
-              min={1900}
-              max={new Date().getFullYear()}
-              id="ReleaseYear"
-              defaultValue={[
-                this.state.releaseYear[0],
-                this.state.releaseYear[1]
-              ]}
-              allowCross={false}
-              onChange={this.onChange}
-            />
-          </div>
+          <span className="col mr-auto indigo-text mt-1">
+            {this.state.releaseYear[0]} - {this.state.releaseYear[1]}
+          </span>
+
+          <Range
+            min={1900}
+            max={new Date().getFullYear()}
+            id="ReleaseYear"
+            defaultValue={[
+              this.state.releaseYear[0],
+              this.state.releaseYear[1]
+            ]}
+            allowCross={false}
+            onChange={this.onChange}
+          />
         </div>
       </React.Fragment>
     )
