@@ -11,13 +11,13 @@ class Dashboard extends Component {
           <h1 className="my-4">The most recent movies</h1>
           <div className="movie-panel">
             <div className="row">
-              <div className="col">
+              <div className="col mb-1">
                 <ItemPanelCard />
               </div>
-              <div className="col">
+              <div className="col mb-1">
                 <ItemPanelCard />
               </div>
-              <div className="col">
+              <div className="col mb-1">
                 <ItemPanelCard />
               </div>
             </div>
