@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStar } from "@fortawesome/free-solid-svg-icons"
@@ -6,21 +7,19 @@ import { faComment } from "@fortawesome/free-solid-svg-icons"
 
 const ItemCard = () => {
   const src = "http://placehold.jp/180x120.png"
+  const movie = { _id: "123" }
+
   return (
     <div className="card border-secondary">
-      <div
-        className="card-body"
-        style={{
-          backgroundImage: `url(${src})`,
-          height: "110px"
-        }}
-      >
-        {/* <img
-          className="card-img-top img-fluid"
-          src={this.state.src}
-          alt="movieImg"
-        /> */}
-      </div>
+      <Link to={`/movies/${movie._id}`}>
+        <div
+          className="card-body"
+          style={{
+            backgroundImage: `url(${src})`,
+            height: "110px"
+          }}
+        />
+      </Link>
       <div className="item-rating">
         <h6 className="card-title pl-2">movie nameeee must two lines</h6>
 
