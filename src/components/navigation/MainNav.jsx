@@ -7,8 +7,8 @@ const MainNav = props => {
 
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="navbar-collapse justify-content-between">
-        <ul class="navbar-nav mr-auto">
+      <div className="navbar-collapse justify-content-between">
+        <ul className="navbar-nav mr-auto">
           <NavLink className="navbar-brand" to="/dashboard">
             Dashboard
           </NavLink>
@@ -18,7 +18,7 @@ const MainNav = props => {
             </Link>
           </li>
         </ul>
-        <ul class="navbar-nav">
+        <ul className="navbar-nav">
           {!user && (
             <React.Fragment>
               <li className="nav-item">
