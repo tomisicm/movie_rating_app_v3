@@ -1,5 +1,9 @@
 import React, { Component } from "react"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faStar } from "@fortawesome/free-solid-svg-icons"
+import { faComment } from "@fortawesome/free-solid-svg-icons"
+
 class ItemCard extends Component {
   state = {
     src: "http://placehold.jp/180x120.png"
@@ -26,8 +30,14 @@ class ItemCard extends Component {
 
           <div className="dropdown-divider" />
           <div className="row card-text">
-            <div className="col pb-2 ml-2">Rating: 2.3</div>
-            <div className="col pb-2 ml-1">Comments: 234</div>
+            <div className="col pb-2 ml-2">
+              <FontAwesomeIcon className="pl-1 ml-1" icon={faStar} />
+              <span className="pl-1">Rating: 2.3</span>
+            </div>
+            <div className="col pb-2 ml-1">
+              <FontAwesomeIcon className="pl-1 ml-1" icon={faComment} />
+              <span className="pl-1">Comments: 2</span>
+            </div>
           </div>
         </div>
       </div>
